@@ -194,14 +194,29 @@ p {
 }
 h1 {
   font-size: 40px;
-  max-width: 100%;
+  margin-left: 15%;
 }
 @media (max-width: 500px) {
   .head {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-left: 20%;
   }
-  .head h1 {
+  .head nav {
+    padding-top: 2.5%;
+    justify-content: center;
+  }
+  .head nav a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    justify-content: space-around;
+  }
+  h1 {
     font-size: 40px;
+    margin-left: 8%;
   }
 }
 footer {
@@ -213,11 +228,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 500px) {
-  .home img {
-    max-width: 100%;
-  }
 }
 .home .intro h2 {
   padding: 15px;
@@ -240,26 +250,21 @@ footer {
   .home .space-images {
     display: flex;
     flex-wrap: wrap;
-    width: 230%;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
   }
-  .home .space-images .sky {
-    display: none;
-  }
-  .home .space-images .launch {
-    display: none;
-  }
   .home .space-images img {
     width: 40%;
-    margin: 2.5%;
+    margin: 20px 2.5%;
     border-radius: 20px;
     height: 100%;
   }
-}
-@media (max-width: 500px) {
-  .home .walk {
-    flex-direction: column-reverse;
+  .home .space-images img .sky {
+    display: none;
+  }
+  .home .space-images img .launch {
+    display: none;
   }
 }
 .home .visit-planets {
@@ -305,27 +310,6 @@ footer {
   background-color: white;
   color: black;
 }
-@media (max-width: 500px) {
-  .home .walk .walk-text .btn {
-    display: block;
-    background-color: black;
-    margin: 0 10px 20px;
-    cursor: pointer;
-    width: 340px;
-    height: 35px;
-    font-size: 17px;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-    display: flex;
-    height: 60px;
-    justify-content: center;
-  }
-  .home .walk .walk-text .btn:hover {
-    background-color: white;
-    color: black;
-  }
-}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
@@ -334,18 +318,4 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-@media (max-width: 500px) {
-  .home .walk .walk {
-    margin-left: 1%;
-  }
-  .home .walk .walk-img {
-    width: 46%;
-    margin-left: 1%;
-  }
-  .home .walk .walk-img img {
-    width: 240%;
-    height: auto;
-    border-radius: 10px;
-  }
 }

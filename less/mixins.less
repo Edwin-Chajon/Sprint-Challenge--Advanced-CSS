@@ -1,8 +1,14 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "global";
+@import "navigation";
+@import "footer";
+@import "home-page";
 
 
 
-
-  .custom-btn(@bgcolor:yellow, @width:250px, @font-color:black){
+  .custom-btn(@bgcolor:grey, @width:250px, @font-color:black){
     display: block;
     background-color: @bgcolor;
     margin: 0 10px 20px;
@@ -24,4 +30,25 @@
     display: flex;
     justify-content: @justify;
     align-items: @align;
+  }
+  
+  @media @Phone{
+    .custom-btn(@bgcolor:grey, @width:600px, @font-color:black){
+        display: block;
+        background-color: @bgcolor;
+        margin: 0 10px 20px;
+        cursor: pointer;
+        width: @width;
+        height: 35px;
+        font-size: 17px;
+        border-radius: 10px;
+        color:@font-color;
+        .custom-layout(center,center);
+        
+        &:hover{
+          background-color:@font-color;
+          color:@bgcolor;
+        }
+    }
+    
   }
